@@ -7,3 +7,5 @@ class rc_rest_admin(admin.ModelAdmin):
     list_display = ('id',  'title', 'description', 'date', 'author', 'comments')
     list_display_links = ('id', 'title', 'comments')
     search_fields = ('id', 'title', 'author')
+
+admin.site.register(rc_rest, rc_rest_admin)
