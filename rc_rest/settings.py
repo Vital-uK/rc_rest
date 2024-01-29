@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
-    'rc_rest_test'
+    'rc_rest_test.apps.RcRestTestConfig'
 ]
 
 MIDDLEWARE = [
