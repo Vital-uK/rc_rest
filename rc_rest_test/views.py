@@ -29,7 +29,7 @@ class post_detail(generics.RetrieveUpdateDestroyAPIView):
 
 class comment_list(generics.ListCreateAPIView):
     queryset = comment.objects.all()
-    serializer_class = serializers.post_serializer
+    serializer_class = serializers.comment_serializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
@@ -37,7 +37,7 @@ class comment_list(generics.ListCreateAPIView):
 
 class comment_detail(generics.RetrieveDestroyAPIView):
     queryset = comment.objects.all()
-    serializer_class = serializers.post_serializer
+    serializer_class = serializers.comment_serializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, is_author_or_readonly]
 
 # TODO: endpoint for jwt registration
