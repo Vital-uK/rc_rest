@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+# post model
 class post(models.Model):
     title = models.CharField(max_length=200, blank=True)
     description = models.TextField(default='', blank=True)
@@ -10,6 +12,7 @@ class post(models.Model):
 #    def __str__(self):
 #        return self.title
 
+# comment model
 class comment(models.Model):
     text = models.TextField(blank=False, default='')
     author = models.ForeignKey('auth.User', related_name='comments', on_delete=models.CASCADE)

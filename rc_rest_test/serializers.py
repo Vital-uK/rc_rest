@@ -9,6 +9,7 @@ class user_serializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'posts', 'comments']
 
+# post serializer
 class post_serializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')
     comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
@@ -16,6 +17,7 @@ class post_serializer(serializers.ModelSerializer):
         model = post
         fields = '__all__'
 
+# comment serializer
 class comment_serializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')
     class Meta:
