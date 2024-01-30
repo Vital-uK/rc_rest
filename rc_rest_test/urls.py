@@ -19,6 +19,7 @@ urlpatterns = [
     path('posts/<int:pk>/', views.post_detail.as_view()),
     path('comments/', views.comment_list.as_view()),
     path('comments/<int:pk>/', views.comment_detail.as_view()),
+    # TODO: urls for jwt login
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

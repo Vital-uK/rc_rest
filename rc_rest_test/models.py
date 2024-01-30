@@ -15,3 +15,5 @@ class comment(models.Model):
     author = models.ForeignKey('auth.User', related_name='comments', on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('post', related_name='comments', on_delete=models.CASCADE)
+
+# TODO: models for jwt auth

@@ -21,3 +21,7 @@ class comment_serializer(serializers.ModelSerializer):
     class Meta:
         model = comment
         fields = '__all__'
+
+# TODO: registration seria;izer for jwt auth
+
+# TODO: login serializer for jwt
