@@ -12,7 +12,7 @@ class post(models.Model):
 
 
 class comment(models.Model):
-    text = models.TextField
-    author = models.CharField(max_length=100)
+    text = models.TextField(blank=False, default='')
+    author = models.CharField(max_length=100, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('post', related_name='comments', on_delete=models.CASCADE)
